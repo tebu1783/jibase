@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+  .page-header
+    h1 Submit a new post
+    hr
+
+  form(method="POST")
+    .form-group
+      .label(for="postTitle") Post title:
+      input.form-control(type="text" name="postTitle" placeholder="Title")
+    .form-group
+      .label(for="postField") Field:
+      select.form-control(name="postField")
+        each field in content.fields
+          option #{field}
+    .form-group
+      .label(for="postContent") Post content:
+      textarea.form-control(type="text" name="postContent" placeholder="Content" rows=10)
+    .form-group
+      button.btn.btn-primary(name="submit" type="submit") Submit
+      button.btn.btn-secondary(type="button" onclick="location.href='/explore'") Cancel

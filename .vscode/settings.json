@@ -4,15 +4,22 @@
     "source.fixAll.eslint": true
   },
   "eslint.validate": ["javascript", "typescript"],
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "[javascript]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": true
   },
   "[typescript]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": true
   },
   "[markdown]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": true
+  },
+  "[jade]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+  },
+  "[sql]": {
+    "editor.formatOnSave": true,
   },
   "search.exclude": {
     "**/node_modules": true,

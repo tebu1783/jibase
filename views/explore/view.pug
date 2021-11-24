@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+  .page-header
+    .d-flex.flex-row.justify-content-between
+      .d-flex.flex-row
+        h1
+          button.btn(type="button" onclick="location.href='/explore'")
+            i.fa.fa-home
+          span  
+          | #{content.post_id}. #{content.title} 
+          span.badge.badge-secondary #{content.field_name}
+      .d-flex.flex-row-reverse
+        h1
+          form(method="POST")
+            button.btn.btn-outline-secondary(name="edit" type="submit") Edit
+        h1
+          form(method="POST")
+            button.btn.btn-outline-danger(name="delete" type="submit") Delete
+    p.text-muted
+    | by #{content.author_name}
+    hr
+
+  .d-flex.flex-column
+    p(style='white-space: pre-line')
+    | #{content.content}
